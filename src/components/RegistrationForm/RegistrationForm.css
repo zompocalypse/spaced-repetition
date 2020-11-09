@@ -1,0 +1,15 @@
+.have-account {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.have-account-link {
+  padding: 0 0.5em;
+  text-decoration: none;
+  color: #363020;
+}
+
+.have-account-link:hover {
+  color: #68c3d4;
+  transition: 0.3s;
+}

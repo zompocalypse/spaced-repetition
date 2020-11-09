@@ -43,7 +43,7 @@ class RegistrationForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p>{error}</p>}</div>
         <div>
-          <Label htmlFor="registration-name-input">
+          <Label htmlFor="registration-name-input" className="input-label">
             Enter your name
             <Required />
           </Label>
@@ -51,18 +51,24 @@ class RegistrationForm extends Component {
             ref={this.firstInput}
             id="registration-name-input"
             name="name"
+            className="input-field"
             required
           />
         </div>
         <div>
-          <Label htmlFor="registration-username-input">
+          <Label htmlFor="registration-username-input" className="input-label">
             Choose a username
             <Required />
           </Label>
-          <Input id="registration-username-input" name="username" required />
+          <Input
+            id="registration-username-input"
+            name="username"
+            className="input-field"
+            required
+          />
         </div>
         <div>
-          <Label htmlFor="registration-password-input">
+          <Label htmlFor="registration-password-input" className="input-label">
             Choose a password
             <Required />
           </Label>
@@ -70,12 +76,17 @@ class RegistrationForm extends Component {
             id="registration-password-input"
             name="password"
             type="password"
+            className="input-field"
             required
           />
         </div>
         <footer>
           <Button type="submit">Sign up</Button>{' '}
-          <Link to="/login">Already have an account?</Link>
+          <div className="have-account">
+            <Link to="/login" className="have-account-link">
+              Already have an account?
+            </Link>
+          </div>
         </footer>
       </form>
     );
