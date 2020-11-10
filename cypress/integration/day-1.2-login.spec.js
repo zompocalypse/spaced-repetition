@@ -162,7 +162,7 @@ describe(`User story: Login`, function () {
           .window()
           .then((win) => {
             const tokenInStorage = win.localStorage.getItem(
-              Cypress.env('TOKEN_KEY')
+              Cypress.env('REACT_APP_TOKEN_KEY')
             );
             expect(tokenInStorage).to.eql(loginToken);
           });
@@ -188,7 +188,7 @@ describe(`User story: Login`, function () {
 
         cy.window().then((win) => {
           const tokenInStorage = win.localStorage.getItem(
-            Cypress.env('TOKEN_KEY')
+            Cypress.env('REACT_APP_TOKEN_KEY')
           );
           expect(tokenInStorage).to.not.exist;
         });

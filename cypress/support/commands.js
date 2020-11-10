@@ -5,7 +5,7 @@ Cypress.Commands.add('login', (options = {}) => {
     .window()
     .then((win) => {
       win.localStorage.setItem(
-        Cypress.env('TOKEN_KEY'),
+        Cypress.env('REACT_APP_TOKEN_KEY'),
         helpers.makeLoginToken()
       );
     });
