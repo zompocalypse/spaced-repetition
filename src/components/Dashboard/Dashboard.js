@@ -15,7 +15,7 @@ class Dashboard extends Component {
   static contextType = UserContext;
 
   componentDidMount() {
-    return fetch(`${config.API_ENDPOINT}/language`, {
+    return fetch(`${config.REACT_APP_API_BASE}/language`, {
       headers: {
         authorization: `bearer ${TokenService.getAuthToken()}`,
       },

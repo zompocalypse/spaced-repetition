@@ -24,7 +24,7 @@ Cypress has the following expectations:
 - You have cypress installed (this is a devDependency of the project)
 - You have your application running at http://localhost:3000.
   - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
+- Your `./src/config.js` is using http://localhost:8000/api as the `REACT_APP_API_BASE`
 
 To start the tests run the command:
 
