@@ -1,0 +1,24 @@
+.wordlist-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-left {
+  flex: 1;
+}
+
+.flex-right {
+  flex: 2;
+}
+
+hr {
+  margin: 0 auto 0;
+  width: 200px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

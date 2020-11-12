@@ -32,8 +32,8 @@ class Dashboard extends Component {
   renderWordList = (words) => {
     let wordList = [];
     if (words) {
-      words.forEach((word) => {
-        wordList.push(<WordList key={word.id} word={word} />);
+      words.map((word) => {
+        return wordList.push(<WordList key={word.id} word={word} />);
       });
     }
     return wordList;
@@ -43,9 +43,11 @@ class Dashboard extends Component {
     const dashContent = (
       <>
         <section>
-          <h2>{this.context.language ? this.context.language.name : null}</h2>
-          <Link to="/learn">
-            <Button className="Button">Start practicing</Button>
+          <h2>
+            Learning {this.context.language ? this.context.language.name : null}
+          </h2>
+          <Link to="/learn" className="practice">
+            <Button>Start practicing</Button>
           </Link>
           <h3>Words to practice</h3>
           <ul>{this.renderWordList(this.context.words)}</ul>

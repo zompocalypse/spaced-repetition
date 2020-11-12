@@ -11,7 +11,7 @@ class DashboardRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section className="dashboard">
         <Dashboard />
       </section>
     );
