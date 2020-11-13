@@ -166,44 +166,57 @@ export default class Learning extends Component {
             </>
           )}
           <form onSubmit={this.handleSubmit}>
-            <div role="alert">{error && <p>{error}</p>}</div>
-            <div>
-              <Label htmlFor="learn-guess-input" className="input-label">
-                What's the translation for this word?
-              </Label>
-              <Input
-                id="learn-guess-input"
-                type="text"
-                name="guess"
-                className="input-field"
-                value={this.state.guess}
-                onChange={(event) => this.handleChange(event)}
-                required
-              />
-            </div>
             {!this.state.answer ? (
-              <Button type="submit" id="learn-submit-button">
-                Submit your answer
-              </Button>
+              <>
+                <div role="alert">{error && <p>{error}</p>}</div>
+                <div>
+                  <Label htmlFor="learn-guess-input" className="input-label">
+                    What's the translation for this word?
+                  </Label>
+                  <Input
+                    id="learn-guess-input"
+                    type="text"
+                    name="guess"
+                    className="input-field"
+                    value={this.state.guess}
+                    onChange={(event) => this.handleChange(event)}
+                    required
+                  />
+                </div>
+                <Button type="submit" id="learn-submit-button">
+                  Submit your answer
+                </Button>
+                <section className="learner-feedback">
+                  <div className="DisplayScore">
+                    <p>Your total score is: {totalScore}</p>
+                  </div>
+                  <p>
+                    You have answered this word correctly {wordCorrectCount}{' '}
+                    times.
+                  </p>
+                  <p>
+                    You have answered this word incorrectly {wordIncorrectCount}{' '}
+                    times.
+                  </p>
+                </section>
+              </>
             ) : (
-              <Button
-                type="button"
-                id="learn-link-button"
-                onClick={(event) => this.handleNextWord(event)}
-              >
-                Try another word!
-              </Button>
+              <>
+                <Button
+                  type="button"
+                  id="learn-link-button"
+                  onClick={(event) => this.handleNextWord(event)}
+                >
+                  Try another word!
+                </Button>
+                <section className="learner-feedback">
+                  <div className="DisplayScore">
+                    <p>Your total score is: {totalScore}</p>
+                  </div>
+                </section>
+              </>
             )}
           </form>
-        </section>
-        <section className="learner-feedback">
-          <div className="DisplayScore">
-            <p>Your total score is: {totalScore}</p>
-          </div>
-          <p>You have answered this word correctly {wordCorrectCount} times.</p>
-          <p>
-            You have answered this word incorrectly {wordIncorrectCount} times.
-          </p>
         </section>
       </>
     );
