@@ -50,7 +50,11 @@ class Dashboard extends Component {
             <Button>Start practicing</Button>
           </Link>
           <h3>Words to practice</h3>
-          <ul>{this.renderWordList(this.context.words)}</ul>
+          {this.state.loading ? (
+            <p>Loading your words...</p>
+          ) : (
+            <ul>{this.renderWordList(this.context.words)}</ul>
+          )}
         </section>
         <section>
           <h4>
