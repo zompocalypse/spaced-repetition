@@ -29,7 +29,13 @@ Button:hover {
 
 .dashboard > section > h2,
 .dashboard > section > h3,
-.dashboard > section > h4 {
+.dashboard > section > h4,
+.learning > section > h2,
+.learning > section > h3,
+.learning > section > h4,
+.learning > section > div > h2,
+.learner-feedback > p,
+.learner-feedback > div > p {
   padding-left: 20px;
 }
 
@@ -67,6 +73,10 @@ Button:hover {
 .input-field:focus {
   outline: none !important;
   border: 2px solid #68c3d4;
+}
+
+.input-label {
+  padding-left: 10px;
 }
 
 @media all and (min-width: 600px) {

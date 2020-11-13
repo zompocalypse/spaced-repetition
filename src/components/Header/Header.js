@@ -46,7 +46,7 @@ class Header extends Component {
       <header className="header">
         <h1>
           <Link to="/" className="navTitle">
-            Spaced repetition
+            Autolearn
           </Link>
         </h1>
         {TokenService.hasAuthToken()
